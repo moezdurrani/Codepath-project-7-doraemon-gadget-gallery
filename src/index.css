@@ -6,4 +6,16 @@
   .navbar {
     @apply text-slate-50 text-2xl w-screen flex justify-center bg-gray-500;
   }
+
+  .page {
+    @apply text-white text-center flex flex-col items-center;
+  }
+
+  h1 {
+    @apply text-7xl my-6;
+  }
+
+  button {
+    @apply bg-blue-900 h-10 rounded-lg transition hover:bg-blue-500 duration-500 w-fit px-3 mx-auto;
+  }
 }

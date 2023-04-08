@@ -10,22 +10,8 @@ import Details from "./pages/Details";
 import Edit from "./pages/Edit";
 
 function App() {
-  const [crew, setCrew] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const { data } = await supabase
-        .from("Crew")
-        .select()
-        .order("created_at", { ascending: true });
-
-      setCrew(data);
-    };
-    fetchData().catch(console.error);
-  }, []);
-
   return (
-    <div className="w-screen h-screen bg-gray-900">
+    <div className="min-h-screen overflow-x-hidden bg-gray-900">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
