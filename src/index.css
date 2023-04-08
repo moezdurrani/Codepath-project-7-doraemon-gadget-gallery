@@ -22,4 +22,8 @@
   form {
     @apply flex flex-col bg-gray-600 py-9 px-16 my-4 rounded-full
   }
+
+  span {
+    @apply bg-slate-700 p-1;
+  }
 }
