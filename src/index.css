@@ -16,6 +16,10 @@
   }
 
   button {
-    @apply bg-blue-900 h-10 rounded-lg transition hover:bg-blue-500 duration-500 w-fit px-3 mx-auto;
+    @apply bg-blue-900 my-6 h-10 rounded-lg transition hover:bg-blue-500 duration-500 w-fit px-3 mx-auto;
+  }
+
+  form {
+    @apply flex flex-col bg-gray-600 py-9 px-16 my-4 rounded-full
   }
 }

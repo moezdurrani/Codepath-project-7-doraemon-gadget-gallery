@@ -10,16 +10,35 @@ import Details from "./pages/Details";
 import Edit from "./pages/Edit";
 
 function App() {
+  const [crew, setCrew] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await supabase
+        .from("Crew")
+        .select()
+        .order("created_at", { ascending: true });
+
+      setCrew(data);
+    };
+    fetchData().catch(console.error);
+  }, []);
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-gray-900">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<Create />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery" element={<Gallery crew={crew} />} />
         <Route path="/:id">
-          <Route index element={<Details />} />
-          <Route path="edit" element={<Edit />} />
+          <Route index element={<Details crew={crew} />} />
+          <Route
+            path="edit"
+            element={
+              crew && crew.length > 0 ? <Edit crew={crew} /> : <p>sorry</p>
+            }
+          />
         </Route>
         <Route
           path="*"
