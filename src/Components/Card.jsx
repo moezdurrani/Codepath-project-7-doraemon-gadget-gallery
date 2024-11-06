@@ -1,23 +1,53 @@
-import outline from "./../assets/ce385016.png";
+import outline from "./../assets/copter.png";
 import { Link } from "react-router-dom";
+import { supabase } from "../client";
+import './Card.css';
 
-const Card = (props) => {
-  const { crewmate } = props;
+const Card = ({ crewmate, onDelete }) => {
+  const handleDelete = async () => {
+    try {
+      const { error } = await supabase
+        .from("Crewmates")
+        .delete()
+        .eq("id", crewmate.id);
+
+      if (error) {
+        console.error("Error deleting crewmate:", error);
+        alert(`Failed to delete crewmate: ${error.message || JSON.stringify(error)}`);
+      } else {
+        alert("Crewmate deleted successfully.");
+        if (onDelete) {
+          onDelete(crewmate.id);
+        }
+      }
+    } catch (error) {
+      console.error("Unexpected error:", error);
+      alert("An unexpected error occurred while trying to delete the crewmate.");
+    }
+  };
 
   return (
-    <div className="bg-gray-500 px-7 py-4 m-7 text-2xl rounded-2xl">
+    <div className="card-container">
       <Link to={`/${crewmate.id}`}>
         <div className="space-y-3">
-          <img src={outline} alt="outline" width="200" className="mx-auto" />
-          <p>Name of Crewmate: <span>{crewmate.Name}</span></p>
-          <p>Speed of Crewmate: <span>{crewmate.Speed} mph</span></p>
-          <p>Color of Crewmate: <span>{crewmate.Color}</span></p>
+          <img src={outline} alt="outline" className="card-image" />
+          <p className="card-text crewmate-name">Name of Gadget: <span>{crewmate.name}</span></p>
+          <p className="card-text crewmate-speed">Power of Gadget: <span>{crewmate.speed} Watts</span></p>
+          <p className="card-text crewmate-color">Color of Gadget: <span>{crewmate.color}</span></p>
         </div>
       </Link>
 
-      <button className="my-6">
-        <Link to={`/${crewmate.id}/edit`}>Edit Crewmate</Link>
-      </button>
+      <div className="card-buttons">
+        <Link to={`/${crewmate.id}/edit`} className="button-edit">
+          Edit Gadget
+        </Link>
+        <button
+          className="button-delete"
+          onClick={handleDelete}
+        >
+          Delete Gadget
+        </button>
+      </div>
     </div>
   );
 };

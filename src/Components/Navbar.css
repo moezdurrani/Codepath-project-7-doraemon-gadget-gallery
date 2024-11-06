@@ -1,0 +1,39 @@
+.navbar {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  width: 100%; 
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px; 
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #ccc;
+}
+
+.cooking-image {
+  margin-left: 20px;
+}

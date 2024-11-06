@@ -1,20 +1,21 @@
-# Web Development Project 7 - *Crewmates*
+# Web Development Project 7 - *Doraemon Gadget Gallery*
 
-Submitted by: **Shi Wei Zheng**
+Submitted by: **Moez Ullah Khan**
 
-This web app: **This app allows user to add, update, delete crewmates. A list of all the crewmates will be display in the gallery.**
+This web app: **shows a list of, gadgets in the doraemon gallery where each gadget has a name, power, and color. The user can add, remove or edit gadgets.**
 
-Time spent: **7** hours spent in total
+Time spent: **11** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **A create form allows users to add new cremates**
-- [x] **Users can name the crewmate and set the crewmate's attributes by clicking on one of several values**
-- [x] **The site displays a summary page of all the user's added crewmates**
-- [x] **A previously created crewmate can be updated and deleted from the crewmate list**
-- [x] **Each crewmate has a direct, unique link to an info page about them**
+- [X] **A create form allows users to add new cremates**
+- [X] **Users can name the crewmate and set the crewmate's attributes by clicking on one of several values**
+- [X] **The site displays a summary page of all the user's added crewmates**
+- [ ] **A previously created crewmate can be updated from the crewmate list**
+- [X] **A previously created crewmate can be deleted from the crewmate list**
+- [X] **Each crewmate has a direct, unique link to an info page about them**
 
 The following **optional** features are implemented:
 
@@ -30,10 +31,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='./src/assets/Walkthrough.gif' title='Video Walkthrough' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/56k26Gq' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ShareX  
+GIF created with LICEcap  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -41,13 +42,11 @@ GIF created with ShareX
 
 ## Notes
 
-Describe any challenges encountered while building the app. 
-- It is my first time using Tailwind CSS so I was having a bit of trouble using it on my project. I was able to get used to the utility classes and understand how Tailwind CSS works.
-- When I was trying to filter the result from the database using the id. I figured out that when getting the param from the url, it returns as a string instead of integer. Instead of using ===, I realized I have to use == to compare the id from the database and the id from the param.
+Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [2023] [Shi Wei Zheng]
+    Copyright 2024 Moez Ullah Khan
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

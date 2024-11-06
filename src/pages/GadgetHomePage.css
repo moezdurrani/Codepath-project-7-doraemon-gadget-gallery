@@ -1,0 +1,19 @@
+.page {
+  background-color: rgb(255, 255, 255);
+  min-height: 100vh;
+  padding: 20px;
+  color: black;
+}
+
+.page h1 {
+  color: #333; 
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.page p {
+  font-size: 2rem;
+  color: #555;
+  margin: 10px 0 20px;
+}

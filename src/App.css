@@ -1,0 +1,19 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333;
+  }
+  
+  .min-h-screen {
+    padding-top: 60px;
+  }
+  
+  .bg-gray-900 {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+  

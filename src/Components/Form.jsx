@@ -15,7 +15,7 @@ const Form = (props) => {
         />
 
         <label htmlFor="speed" className="my-4 text-3xl font-semibold">
-          Speed (mph):
+          Power (Watts):
         </label>
         <input
           type="text"

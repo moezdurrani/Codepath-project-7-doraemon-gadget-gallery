@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import NavBar from "./Components/NavBar";
 import { supabase } from "./client";
-import { Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Create from "./pages/Create";
-import Gallery from "./pages/Gallery";
-import Details from "./pages/Details";
-import Edit from "./pages/Edit";
+import Home from "./pages/GadgetHomePage";
+import Create from "./pages/CreateGadget";
+import Gallery from "./pages/GadgetGallery";
+import Details from "./pages/GadgetDetails";
+import Edit from "./pages/EditGadget";
+import './App.css';
 
 function App() {
   const [crew, setCrew] = useState([]);
@@ -31,15 +32,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<Create />} />
         <Route path="/gallery" element={<Gallery crew={crew} />} />
-        <Route path="/:id">
-          <Route index element={<Details crew={crew} />} />
-          <Route
-            path="edit"
-            element={
-              crew && crew.length > 0 ? <Edit crew={crew} /> : <p>sorry</p>
-            }
-          />
-        </Route>
+        <Route path="/:id" element={<Details crew={crew} />} />
+        <Route path="/:id/edit" element={<Edit crew={crew} />} /> 
+
         <Route
           path="*"
           element={

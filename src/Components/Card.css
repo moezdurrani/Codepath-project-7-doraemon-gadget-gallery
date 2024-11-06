@@ -1,0 +1,68 @@
+.card-container {
+    background-color: #e2e2e2;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+  
+  .card-container:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-image {
+    margin: 0 auto;
+    width: 200px;
+    margin-bottom: 15px;
+  }
+  
+  .card-text {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-text span {
+    background-color: rgb(44, 208, 217);
+  }
+  
+  .card-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .button-edit,
+  .button-delete {
+    flex: 1; 
+    max-width: 140px;
+    height: 45px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    color: white;
+    transition: background-color 0.2s;
+    margin: 0 5px; 
+    text-decoration: none;
+  }
+  
+  .button-edit {
+    background-color: #1b6ab4;
+  }
+  
+  .button-edit:hover {
+    background-color: #165b9d;
+  }
+  
+  .button-delete {
+    background-color: #e53e3e;
+  }
+  
+  .button-delete:hover {
+    background-color: #c53030;
+  }
